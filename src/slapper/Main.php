@@ -64,6 +64,7 @@ use slapper\entities\SlapperZombieVillager;
 use slapper\events\SlapperCreationEvent;
 use slapper\events\SlapperDeletionEvent;
 use slapper\events\SlapperHitEvent;
+use slapper\entities\SlapperEnderDragon;
 
 
 class Main extends PluginBase implements Listener {
@@ -79,7 +80,7 @@ class Main extends PluginBase implements Listener {
 		"Horse", "Donkey", "Mule", "SkeletonHorse",
 		"ZombieHorse", "Witch", "Rabbit", "Stray",
 		"Husk", "WitherSkeleton", "IronGolem", "Snowman",
-		"MagmaCube", "Squid"
+		"MagmaCube", "Squid", "EnderDragon"
 	];
 
 	const ENTITY_ALIASES = [
@@ -171,6 +172,7 @@ class Main extends PluginBase implements Listener {
 		Entity::registerEntity(SlapperHusk::class, true);
 		Entity::registerEntity(SlapperWitherSkeleton::class, true);
 		Entity::registerEntity(SlapperFallingSand::class, true);
+                Entity::registerEntity(SlapperEnderDragon::class, true);
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 
